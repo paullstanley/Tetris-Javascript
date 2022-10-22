@@ -2,6 +2,8 @@ const canvas = document.getElementById('board');
 const ctx = canvas.getContext('2d');
 const canvasNext = document.getElementById('next');
 const ctxNext = canvasNext.getContext('2d');
+document.width = screen.width;
+document.height = screen.height;
 
 let accountValues = {
     score: 0,
