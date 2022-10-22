@@ -2,8 +2,6 @@ const canvas = document.getElementById('board');
 const ctx = canvas.getContext('2d');
 const canvasNext = document.getElementById('next');
 const ctxNext = canvasNext.getContext('2d');
-const canvasDpad = document.getElementById('dpad');
-const ctxDpad = canvasDpad.getContext('2d');
 
 let accountValues = {
     score: 0,
@@ -36,13 +34,29 @@ moves = {
     [KEY.UP]: (p) => board.rotate(p)
 };
 
+function moveup() {
+    let p = moves[KEY.UP](board.piece);
+    board.piece.move(p);
+}
+
+function movedown() {
+    let p = moves[KEY.DOWN](board.piece);
+    board.piece.move(p);
+}
+
+function moveleft() {
+    let p = moves[KEY.LEFT](board.piece);
+    board.piece.move(p);
+}
+
+function moveright() {
+    let p = moves[KEY.RIGHT](board.piece);
+    board.piece.move(p);
+}
+
 let board = new Board(ctx, ctxNext);
 addEventListener();
 initNext();
-
-//let dpad = new Dpad(ctx, ctxDpad);
-//dpad.draw();
-
 
 function initNext(){
     ctxNext.canvas.width = 4 * BLOCK_SIZE;

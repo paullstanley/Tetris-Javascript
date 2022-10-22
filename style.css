@@ -23,3 +23,20 @@
     padding: 15px 30px;
     cursor: pointer;
 }
+
+.pause-button{
+    background-color: #fc0101;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 15px 60px;
+    cursor: pointer;
+}
+
+.dpad-button{
+    background-color: #353434;
+    color: #ffffff;
+    border-width: 5px;
+    border-style: groove;
+    padding: 14px 14px;
+    cursor: pointer;
+}
