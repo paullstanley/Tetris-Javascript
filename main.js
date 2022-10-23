@@ -135,6 +135,7 @@ function play(){
         cancelAnimationFrame(requestId);
     }
     animate();
+    changeElementSize();
 }
 
 function animate(now = 0){
