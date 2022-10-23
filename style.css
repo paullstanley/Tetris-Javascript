@@ -45,6 +45,7 @@
 }
 
 .dpad-button{
+    touch-action: manipulation;
     display: flexbox;
     background-color: #353434;
     color: #ffffff;
