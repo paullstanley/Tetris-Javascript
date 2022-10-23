@@ -59,7 +59,7 @@ addEventListener();
 initNext();
 
 function initNext(){
-    ctxNext.canvas.width = 4 * BLOCK_SIZE;
+    ctxNext.canvas.width =  BLOCK_SIZE;
     ctxNext.canvas.height = 4 * BLOCK_SIZE;
     ctxNext.scale(BLOCK_SIZE, BLOCK_SIZE);
 }
