@@ -3,7 +3,7 @@
 }
 
 .grid{
-    display: grid;
+    display: flex;
     grid-template-columns: 320px 200px;
 }
 
@@ -14,29 +14,29 @@
 }
 
 .game-board{
-    border: solid 2px;
+    border: solid .2em;
 }
 
 .play-button{
     background-color: #4caf50;
-    font-size: 16px;
-    padding: 15px 30px;
+    font-size: .76em;
+    padding: 1.5em .60em;
     cursor: pointer;
 }
 
 .pause-button{
     background-color: #fc0101;
-    font-size: 14px;
+    font-size: .74em;
     color: #ffffff;
-    padding: 15px 60px;
+    padding: 1.5em .60em;
     cursor: pointer;
 }
 
 .dpad-button{
     background-color: #353434;
     color: #ffffff;
-    border-width: 5px;
+    border-width: .5em;
     border-style: groove;
-    padding: 14px 14px;
+    padding: 1.4em 1.0em;
     cursor: pointer;
 }
