@@ -12,7 +12,7 @@ let accountValues = {
 function changeElementSize(){
     // Compare your element's aspect ratio with window's aspect ratio
     // My element was 100w x 80h so mine was 1.25
-    if (window.innerWidth/window.innerHeight > 1.15){
+    if (window.innerWidth/window.innerHeight > 0.5){
         document.getElementsByClassName('grid').height = "100%";
         document.getElementsByClassName('grid').width = "auto";
         board.height = "100%";
