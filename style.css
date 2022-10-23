@@ -3,6 +3,10 @@
     font-size: small;
 }
 
+body, html {
+    user-select: none;
+}
+
 .grid{
     touch-action: manipulation;
     display: flex;
