@@ -4,13 +4,18 @@
 
 .grid{
     display: flex;
-    grid-template-columns: 320px 200px;
+    max-width: 100%;
+    max-height: 100%;
+    grid-template-columns: 50% 50%;
 }
 
 .right-column{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 50%;
+    max-height: 100%;
+    padding-left: 1em;
 }
 
 .game-board{
@@ -18,17 +23,24 @@
 }
 
 .play-button{
+    display: flex;
     background-color: #4caf50;
     font-size: .76em;
-    padding: 1.5em .60em;
+    padding: 1.5em 4.6em;
     cursor: pointer;
 }
 
+.pause{
+    padding-left: 25%;
+    padding-bottom: 50%;
+}
+
 .pause-button{
+    display: flex;
     background-color: #fc0101;
-    font-size: .74em;
+    font-size: .76em;
     color: #ffffff;
-    padding: 1.5em .60em;
+    padding: 1.5em 1.60em;
     cursor: pointer;
 }
 
