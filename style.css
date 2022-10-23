@@ -10,8 +10,8 @@ body, html {
 .grid{
     touch-action: manipulation;
     display: flex;
-    max-width: 100%;
-    max-height: 100%;
+    grid-template-columns: 320px 200px;
+    //max-width: 100%;
     grid-template-columns: 50% 50%;
 }
 

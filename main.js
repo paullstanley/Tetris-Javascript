@@ -9,6 +9,33 @@ let accountValues = {
     lines: 0
 }
 
+function changeElementSize(){
+    // Compare your element's aspect ratio with window's aspect ratio
+    // My element was 100w x 80h so mine was 1.25
+    if (window.innerWidth/window.innerHeight > 1.15){
+        //document.getElementsByClassName('grid').css('height','100%');
+        //document.getElementsByClassName('grid').css('width','auto');
+        document.getElementsByClassName('grid').height = "100%";
+        document.getElementsByClassName('grid').width = "auto";
+        //$('#body').css('height','100%');
+        //$('#body').css('width','auto');
+    } else {
+        document.getElementsByClassName('grid').width = "100%";
+        document.getElementsByClassName('grid').height = "auto";
+        //document.getElementsByClassName('grid').height("auto");
+        //$('#body').css('width','100%');
+        //$('#body').css('height','auto');
+    }
+}
+
+window.onresize = (() => {
+    changeElementSize();
+});
+
+window.onload = (() => {
+    changeElementSize();
+});
+
 function updateAccount(key, value){
     let element = document.getElementById(key);
     if (element){

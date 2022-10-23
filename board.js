@@ -128,7 +128,7 @@ class Board{
     }
 
     insideWalls(x) {
-        return x >= 0 && x < COLS + 2;
+        return x >= 0 && x < COLS;
     }
 
     aboveFloor(y) {
