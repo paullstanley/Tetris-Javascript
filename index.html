@@ -13,21 +13,22 @@
             <div class="right-column">
                 <div>
                     <h1>TETRIS</h1>
-                    <p>Score: <span id="score">0</span></p>
-                    <p>Lines: <span id="lines">0</span></p>
-                    <p>Level: <span id="level">0</span></p>
-                    <canvas id="next" class="next"></canvas>
                     <div class="pause">
                         <button onclick="pause()" class="pause-button">Pause</button>
                     </div>
-                </div>
-                <div style="text-align:center">
-                    <button class="dpad-button" onclick ="moveup()">  UP  </button>
-                    <br>
-                    <button class="dpad-button" onclick ="moveleft()">LEFT </button>
-                    <button class="dpad-button" onclick ="moveright()">RIGHT </button>
-                    <br>
-                    <button class="dpad-button" onclick ="movedown()">DOWN </button>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>Lines: <span id="lines">0</span></p>
+                    <p>Level: <span id="level">0</span></p>
+                    <p style="text-decoration: underline; text-decoration-thickness: 3px">Next</p>
+                    <canvas id="next" class="next"></canvas>
+                    <div style="text-align:center">
+                        <button class="dpad-button" onclick ="moveup()">  UP  </button>
+                        <br>
+                        <button class="dpad-button" onclick ="moveleft()">LEFT </button>
+                        <button class="dpad-button" onclick ="moveright()">RIGHT </button>
+                        <br>
+                        <button class="dpad-button" onclick ="movedown()">DOWN </button>
+                    </div>
                 </div>
                 <button onclick="play()" class="play-button">Play</button>
             </div>
