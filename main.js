@@ -13,18 +13,19 @@ function changeElementSize(){
     // Compare your element's aspect ratio with window's aspect ratio
     // My element was 100w x 80h so mine was 1.25
     if (window.innerWidth/window.innerHeight > 1.15){
-        //document.getElementsByClassName('grid').css('height','100%');
-        //document.getElementsByClassName('grid').css('width','auto');
         document.getElementsByClassName('grid').height = "100%";
         document.getElementsByClassName('grid').width = "auto";
-        //$('#body').css('height','100%');
-        //$('#body').css('width','auto');
+        board.height = "100%";
+        board.width = "auto";
+        board.piece.height = "100%";
+        board.width = "auto";
     } else {
         document.getElementsByClassName('grid').width = "100%";
         document.getElementsByClassName('grid').height = "auto";
-        //document.getElementsByClassName('grid').height("auto");
-        //$('#body').css('width','100%');
-        //$('#body').css('height','auto');
+        board.width = "100%";
+        board.height = "auto";
+        board.piece.width = "100%";
+        board.piece.height = "auto";
     }
 }
 
