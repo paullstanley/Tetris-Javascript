@@ -2,7 +2,7 @@ const canvas = document.getElementById('board');
 const ctx = canvas.getContext('2d');
 const canvasNext = document.getElementById('next');
 const ctxNext = canvasNext.getContext('2d');
-
+console.log("Loaded")
 let accountValues = {
     score: 0,
     level: 0,
@@ -16,8 +16,6 @@ function changeElementSize(){
         document.getElementsByClassName('grid').height = "100%";
         document.getElementsByClassName('grid').width = "auto";
         board.height = "100%";
-        board.width = "auto";
-        board.piece.height = "100%";
         board.width = "auto";
     } else {
         document.getElementsByClassName('grid').width = "100%";
@@ -54,6 +52,12 @@ let account = new Proxy(accountValues, {
 
 let requestId;
 
+btnMoves = {
+    ["KEY.LEFT"]: p => ({ ...p, x: p.x - 1}),
+    ["KEY.RIGHT"]: p => ({ ...p, x: p.x + 1}),
+    ["KEY.DOWN"]: p => ({ ...p, y: p.y + 1})
+};
+
 moves = {
     [KEY.LEFT]: p => ({ ...p, x: p.x - 1}),
     [KEY.RIGHT]: p => ({ ...p, x: p.x + 1}),
@@ -61,26 +65,6 @@ moves = {
     [KEY.SPACE]: p => ({ ...p, y: p.y + 1}),
     [KEY.UP]: (p) => board.rotate(p)
 };
-
-function moveup() {
-    let p = moves[KEY.UP](board.piece);
-    board.piece.move(p);
-}
-
-function movedown() {
-    let p = moves[KEY.DOWN](board.piece);
-    board.piece.move(p);
-}
-
-function moveleft() {
-    let p = moves[KEY.LEFT](board.piece);
-    board.piece.move(p);
-}
-
-function moveright() {
-    let p = moves[KEY.RIGHT](board.piece);
-    board.piece.move(p);
-}
 
 let board = new Board(ctx, ctxNext);
 addEventListener();
@@ -93,6 +77,19 @@ function initNext(){
 }
 
 function addEventListener(){
+    buttons = document.querySelectorAll(".dpad-button");
+    for(let i = 0; i < buttons.length; i++) {
+        const btn = buttons[i];
+        btn.addEventListener('click', event => {
+            p = btnMoves[btn.id](board.piece);
+            if (event) {
+                if(board.valid(p)) {
+                    board.piece.move(p);
+               }
+            }
+        });
+    }
+
     document.addEventListener('keydown', event => {
         if (event.keyCode == KEY.P){
             pause();
@@ -135,7 +132,7 @@ function play(){
         cancelAnimationFrame(requestId);
     }
     animate();
-    changeElementSize();
+    
 }
 
 function animate(now = 0){
