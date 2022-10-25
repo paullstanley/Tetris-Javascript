@@ -9,32 +9,6 @@ let accountValues = {
     lines: 0
 }
 
-function changeElementSize(){
-    // Compare your element's aspect ratio with window's aspect ratio
-    // My element was 100w x 80h so mine was 1.25
-    if (window.innerWidth/window.innerHeight > 0.5){
-        document.getElementsByClassName('grid').height = "100%";
-        document.getElementsByClassName('grid').width = "auto";
-        board.height = "100%";
-        board.width = "auto";
-    } else {
-        document.getElementsByClassName('grid').width = "100%";
-        document.getElementsByClassName('grid').height = "auto";
-        board.width = "100%";
-        board.height = "auto";
-        board.piece.width = "100%";
-        board.piece.height = "auto";
-    }
-}
-
-window.onresize = (() => {
-    changeElementSize();
-});
-
-window.onload = (() => {
-    changeElementSize();
-});
-
 function updateAccount(key, value){
     let element = document.getElementById(key);
     if (element){

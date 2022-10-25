@@ -11,17 +11,15 @@ body, html {
     touch-action: manipulation;
     display: flex;
     grid-template-columns: 320px 200px;
-    //max-width: 100%;
     grid-template-columns: 50% 50%;
 }
 
 .right-column{
     touch-action: manipulation;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 50%;
+    max-height: 50%;
     padding-left: 1em;
 }
 .next{
@@ -33,6 +31,7 @@ body, html {
 
 .game-board{
     border: solid .2em;
+    max-width: 50%;
 }
 
 .play-button{
@@ -52,11 +51,12 @@ body, html {
 
 .dpad-button{
     touch-action: manipulation;
-    display: flexbox;
     background-color: #353434;
     color: #ffffff;
     border-width: .5em;
     border-style: groove;
     padding: .6em;
     cursor: pointer;
+    display: flex;
+    max-width: 100%;
 }
