@@ -4,6 +4,7 @@
 }
 
 body, html {
+    touch-action: manipulation;
     user-select: none;
     background-size: 100% auto;
 }
@@ -16,6 +17,7 @@ body, html {
 }
 
 .right-column{
+    touch-action: manipulation;
     touch-action: manipulation;
     flex-direction: column;
     justify-content: space-between;
@@ -36,12 +38,14 @@ body, html {
 }
 
 .play-button{
+    touch-action: manipulation;
     display: flex;
     background-color: #4caf50;
     padding: .6em;
     cursor: pointer;
 }
 .pause-button{
+    touch-action: manipulation;
     display: flex;
     background-color: #fc0101;
     font-size: .76em;
